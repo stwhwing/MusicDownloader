@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <MyType>Windows</MyType>
+    <AssemblyName>MusicDownloader</AssemblyName>
+    <AssemblyVersion>2.8.15.0</AssemblyVersion>
+    <FileVersion>2.8.15.0</FileVersion>
+    <Version>2.8.15</Version>
+    <Product>音乐下载器</Product>
+    <Company>Qoderwork</Company>
+    <Description>网易云/酷我/酷狗多源音乐搜索下载，自动过滤非原唱</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="TagLibSharp" Version="2.3.0" />
+  </ItemGroup>
+
+</Project>
+
