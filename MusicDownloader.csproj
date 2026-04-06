@@ -2,24 +2,37 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows10.0.17763.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
     <MyType>Windows</MyType>
     <AssemblyName>MusicDownloader</AssemblyName>
-    <AssemblyVersion>2.8.15.0</AssemblyVersion>
-    <FileVersion>2.8.15.0</FileVersion>
-    <Version>2.8.15</Version>
+    <AssemblyVersion>2.8.16.0</AssemblyVersion>
+    <FileVersion>2.8.16.0</FileVersion>
+    <Version>2.8.16</Version>
     <Product>音乐下载器</Product>
     <Company>Qoderwork</Company>
     <Description>网易云/酷我/酷狗多源音乐搜索下载，自动过滤非原唱</Description>
+    <!-- 嵌入自定义 manifest，声明 Win10/Win11 兼容性和 DPI 感知 -->
+    <!-- 修复：Win10 教育版/企业版弹出"此应用无法在你的电脑上运行"问题 -->
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <!-- 告知 .NET 运行时本程序的最低支持 Windows 版本（Win10 1809 = 10.0.17763） -->
+    <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="TagLibSharp" Version="2.3.0" />
+  </ItemGroup>
+
+  <!-- 排除测试项目目录，防止 WPF 构建时临时 csproj 误包含测试文件 -->
+  <ItemGroup>
+    <Compile Remove="MusicDownloader.Tests\**" />
+    <EmbeddedResource Remove="MusicDownloader.Tests\**" />
+    <None Remove="MusicDownloader.Tests\**" />
+    <Page Remove="MusicDownloader.Tests\**" />
   </ItemGroup>
 
 </Project>
