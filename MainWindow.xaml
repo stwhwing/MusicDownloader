@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="clr-namespace:MusicDownloader.ViewModels"
         mc:Ignorable="d"
-        Title="🎵 音乐下载器 v2.8.15"
+        Title="🎵 音乐下载器 v2.8.16"
         Height="760" Width="1100"
         MinHeight="640" MinWidth="900"
         Background="#1E1E2E"
