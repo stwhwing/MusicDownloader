@@ -122,6 +122,21 @@ MusicDownloader/
 
 ---
 
+## 📋 最新更新
+
+查看完整更新记录：[CHANGELOG.md](CHANGELOG.md)
+
+### [v2.8.16] - 2026-04-05 · 兼容性修复版
+
+> 修复 Win10 教育版/企业版无法启动的问题
+
+**修复：**
+- 🔴 新增 `app.manifest` — 声明 Win10/11/8.1/8/7 支持（含官方 `<supportedOS>` GUID），修复"此应用无法在你的电脑上运行"
+- 添加 Per-Monitor V2 DPI 感知，修复高 DPI 屏界面模糊
+- `TargetFramework` 升至 `net8.0-windows10.0.17763.0`（Win10 1809+）
+
+---
+
 ## 📥 下载 Releases
 
 前往 [GitHub Releases](https://github.com/stwhwing/MusicDownloader/releases) 下载最新版本 `MusicDownloader.exe`，双击即可运行。
