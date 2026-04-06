@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 
 ---
 
+## [2.8.16] - 2026-04-05
+
+> 兼容性修复版 · 修复 Win10 教育版/企业版无法启动的问题
+
+### Fixed
+
+- **[🔴 严重]** `app.manifest` — 新增 `<compatibility>/<supportedOS>` 声明，修复 Win10 教育版/企业版弹出"此应用无法在你的电脑上运行"的问题
+  - 声明支持 Windows 7 / 8 / 8.1 / 10 / 11（含官方 GUID）
+  - 添加 Per-Monitor V2 DPI 感知声明，修复高 DPI 屏下界面模糊问题
+- **`MusicDownloader.csproj`** — `TargetFramework` 升为 `net8.0-windows10.0.17763.0`，与 `SupportedOSPlatformVersion=10.0.17763.0` 保持一致
+- **`MusicDownloader.csproj`** — 排除 `MusicDownloader.Tests\**`，防止 WPF 构建生成的临时 csproj 误包含测试文件导致构建失败
+
+### Changed
+
+- 发布体积：147.8 MB → 170.9 MB（引入 Win10 SDK API 引用包，属正常现象）
+
+---
+
 ## [2.8.15] - 2026-04-01
 
 > 三轮深度审查（9轮次）全面修复版 · GitHub首发版
